@@ -16,3 +16,8 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/Laravel/vendor
+/Laravel/bootstrap
+/Laravel/node_modules
+/VueJS_2/leon_bloy_front/node_modules
+
