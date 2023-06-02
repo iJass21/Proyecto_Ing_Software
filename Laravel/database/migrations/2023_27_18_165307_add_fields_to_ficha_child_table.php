@@ -34,6 +34,7 @@ return new class extends Migration
             $table->dropColumn('fec_salida');
             $table->dropColumn('objetivos');
             $table->dropColumn('description');
+            
         });
     }
 };
