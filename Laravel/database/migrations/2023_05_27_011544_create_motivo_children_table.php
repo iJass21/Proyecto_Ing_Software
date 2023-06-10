@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('motivo_children', function (Blueprint $table) {
             $table->foreignId('children_id')->references('id')->on('childrens')->onDelete('cascade');
-            $table->foreignId('motivo_id')->references('id')->on('motivo_ingreso')->onDelete('cascade');
+            $table->foreignId('motivo_id')->references('id')->on('motivo_ingresos')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -23,6 +23,10 @@ class adulto_responsableController extends Controller
             'rubro' => 'required|string'
         ]);
 
+   /*     if($validator->fails()){
+            return response()->json($validator->errors());
+        }*/
+
         adulto_responsable::create([
             'name' => $request->name,
             'lastname' => $request->lastname,
