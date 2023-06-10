@@ -12,4 +12,8 @@ class motivo_ingreso extends Model
     protected $fillable = [
         'description'
     ];
+
+    public function Children(){
+        return $this->belongsToMany(children::class);
+    }
 }

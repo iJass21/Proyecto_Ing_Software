@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
-            $table->id();
-            $table->string('uuid')->unique();
-            $table->text('connection');
-            $table->text('queue');
-            $table->longText('payload');
-            $table->longText('exception');
-            $table->timestamp('failed_at')->useCurrent();
+        Schema::create('children_motivo_ingreso', function (Blueprint $table) {
+            $table->foreignId('children_id')->references('id')->on('childrens')->onDelete('cascade');
+            $table->foreignId('motivo_ingreso_id')->references('id')->on('motivo_ingresos')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('failed_jobs');
+        Schema::dropIfExists('children_motivo_ingreso');
     }
 };

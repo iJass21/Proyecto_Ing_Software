@@ -16,7 +16,7 @@ class motivo_ingresoController extends Controller
 
         motivo_ingreso::create([
             'description' => $request->description
-            ]);
+        ]);
             //redireccion
             return $request->all();
     }

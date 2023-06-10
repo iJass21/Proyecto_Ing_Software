@@ -61,6 +61,8 @@ Route::get('adulto_responsable/show_all',[ adulto_responsableController::class, 
 
 Route::post('children',[ childrenController::class, 'store']);
 
+Route::post('children/addmotivo',[ childrenController::class, 'addMotivo']);
+
 
 # Ficha metodos
 
