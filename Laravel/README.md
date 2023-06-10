@@ -4,8 +4,8 @@
 
 ### Agregar remember_token a tabla users -> MAÑANA
 ### Hacer motivo_children -> MAÑANA
-### Hacer descripcion alerta -> MAÑANA
-### Hacer alertas -> MAÑANA
+### Hacer descripcion alerta -> MAÑANA -> LISTO
+### Hacer alertas -> MAÑANA -> LISTO
 ### Hacer para mostrar las tablas (all y id especifico) -> MAÑANA
 ### Eliminar (niño, usuario, alerta, todo)
 ### updates (fichas, childres (adulto responsable))
