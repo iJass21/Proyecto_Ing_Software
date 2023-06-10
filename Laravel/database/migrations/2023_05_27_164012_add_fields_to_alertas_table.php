@@ -21,7 +21,7 @@ return new class extends Migration
             ->onUpdate('cascade')
             ->onDelete('some action');*/
             
-            $table->foreignId('children_id')->references('id')->on('children')->constrained()->onDelete('cascade');
+            $table->foreignId('children_id')->references('id')->on('childrens')->constrained()->onDelete('cascade');
         });
     }
 

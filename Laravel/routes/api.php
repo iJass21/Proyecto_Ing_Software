@@ -1,6 +1,9 @@
 <?php
 
-use App\Http\Controllers\AdultoResponsableController;
+use App\Http\Controllers\adulto_responsableController;
+use App\Http\Controllers\childrenController;
+use App\Http\Controllers\ficha_childController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +22,49 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/adulto_responsable/create',[ AdultoResponsableController::class, 'create']);
+
+
+# RUTAS PROTEGIDAS - PASAR TOKEN 
+
+Route::middleware(['auth:sanctum'])->group(function () {
+
+    ## Logout
+
+    Route::get('logout',[ AuthController::class, 'logout']);
+
+    ## Adulto responsable
+    Route::post('adulto_responsable',[ adulto_responsableController::class, 'store']);
+    Route::get('adulto_responsable/show_all',[ adulto_responsableController::class, 'index']);
+
+});
+
+//Route::get('/adulto_responsable/create',[ AdultoResponsableController::class, 'create']);
+
+
+# Users
+
+Route::post('register',[ AuthController::class, 'register']);
+Route::post('login',[ AuthController::class, 'login']);
+
+
+# AdultoResponsable Metodos
+
+Route::get('adulto_responsable/show_all',[ adulto_responsableController::class, 'index']);
+
+
+
+
+# Niños metodos
+
+Route::post('children',[ childrenController::class, 'store']);
+
+
+# Ficha metodos
+
+Route::post('ficha_child',[ ficha_childController::class, 'store']);
+
+# Protegidas
+
+
+
+

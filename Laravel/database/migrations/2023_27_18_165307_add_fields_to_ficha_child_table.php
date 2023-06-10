@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('ficha_child', function (Blueprint $table) {
+        Schema::table('ficha_children', function (Blueprint $table) {
             //
-            $table->foreignId('children_id')->references('id')->on('children')->constrained()->onDelete('cascade');
+            $table->foreignId('children_id')->references('id')->on('childrens')->constrained()->onDelete('cascade');
             $table->date('fec_ingreso');
             $table->date('fec_salida');
             $table->string('objetivos');
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('ficha_child', function (Blueprint $table) {
+        Schema::table('ficha_children', function (Blueprint $table) {
             //
             $table->dropColumn('child_id');
             $table->dropForeign('chid_id_foreing');

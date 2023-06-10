@@ -21,6 +21,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'rut',
+        'f_nac',
+        'cargo',
+        'remember_token',
+        'mod_ficha',
+        'direccion',
+        'phone'
     ];
 
     /**
